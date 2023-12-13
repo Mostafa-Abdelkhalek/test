@@ -2,14 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('deploy app') {
+        stage('Deploy App') {
             steps {
                 script {
-                    // Corrected 'kubectl apply' commands and 'minikube service' command
+                    // Run kubectl apply commands
                     sh """
                     kubectl apply -f deployment.yml
                     kubectl apply -f svc.yml
-                    start minikube service python-app-svc
                     """
                 }
             }
