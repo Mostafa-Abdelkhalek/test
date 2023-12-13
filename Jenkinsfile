@@ -9,8 +9,9 @@ pipeline {
                     sh """
                     kubectl apply -f deployment.yml
                     kubectl apply -f svc.yml
-                    minikube service python-app-svc --url &
+                    start minikube service python-app-svc
                     """
+
 
                 }
             }
