@@ -11,8 +11,6 @@ pipeline {
                     kubectl apply -f svc.yml
                     start minikube service python-app-svc
                     """
-
-
                 }
             }
         }
