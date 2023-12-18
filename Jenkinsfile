@@ -7,8 +7,8 @@ pipeline {
                 script {
                     // Run kubectl apply commands
                     sh """
-                    kubectl apply -f deployment.yml
-                    kubectl apply -f svc.yml
+                    kubectl apply -f deployment.yml --validate=false
+                    kubectl apply -f svc.yml --validate=false
                     """
                 }
             }
