@@ -10,7 +10,7 @@ pipeline {
                     kubectl apply -f deployment.yml
                     kubectl apply -f svc.yml
                     """
-                    sleep (time: 2 ,units: "MINUTES")
+                    sleep (time: 120 ,units: "SECONDS")
                     
                 }
             }
